@@ -1,4 +1,4 @@
-package tfar.islandsofavorion.datagen.tag;
+package tfar.islandsofavorion.datagen.data.tag;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;

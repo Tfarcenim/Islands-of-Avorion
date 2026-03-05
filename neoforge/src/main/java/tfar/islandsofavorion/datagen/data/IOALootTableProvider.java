@@ -1,4 +1,4 @@
-package tfar.islandsofavorion.datagen;
+package tfar.islandsofavorion.datagen.data;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.WritableRegistry;
@@ -19,7 +19,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
-class IOALootTableProvider extends LootTableProvider {
+public class IOALootTableProvider extends LootTableProvider {
 
 
     public IOALootTableProvider(PackOutput output, Set<ResourceKey<LootTable>> requiredTables, List<SubProviderEntry> subProviders,
