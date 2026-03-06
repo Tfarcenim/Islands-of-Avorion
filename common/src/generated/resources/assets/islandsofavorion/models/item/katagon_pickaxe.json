@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "islandsofavorion:item/katagon_pickaxe"
+  }
+}

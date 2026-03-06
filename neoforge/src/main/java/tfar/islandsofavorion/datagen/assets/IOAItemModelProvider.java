@@ -20,8 +20,18 @@ public class IOAItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         for (MaterialGroup materialGroup : MaterialGroup.MATERIAL_GROUPS) {
             generatedItem(materialGroup.arrow());
+            generatedItem(materialGroup.bar());
+            generatedItem(materialGroup.harvestingKnife());
+            generatedItem(materialGroup.hatchet());
+            generatedItem(materialGroup.kiteshield());
             generatedItem(materialGroup.longsword());
+            generatedItem(materialGroup.needle());
             generatedItem(materialGroup.rawOre());
+            generatedItem(materialGroup.pickaxe());
+            generatedItem(materialGroup.armorGroup().helmet().get());
+            generatedItem(materialGroup.armorGroup().chest().get());
+            generatedItem(materialGroup.armorGroup().leggings().get());
+            generatedItem(materialGroup.armorGroup().boots().get());
         }
 
         for (SecondMaterialGroup materialGroup : SecondMaterialGroup.SECOND_MATERIAL_GROUPS) {

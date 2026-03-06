@@ -20,9 +20,7 @@ public class IOAItems {
     //arrows, longswords
     static {
         for (MaterialGroup materialGroup : MaterialGroup.MATERIAL_GROUPS) {
-            materialGroup.arrow();
-            materialGroup.longsword();
-            materialGroup.rawOre();
+            materialGroup.init();
         }
         for (SecondMaterialGroup materialGroup : SecondMaterialGroup.SECOND_MATERIAL_GROUPS) {
             materialGroup.shortbow().get();//triggers registration
