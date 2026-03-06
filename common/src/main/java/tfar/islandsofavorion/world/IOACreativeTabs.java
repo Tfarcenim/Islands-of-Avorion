@@ -6,11 +6,12 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import tfar.islandsofavorion.IslandsOfAvorion;
+import tfar.islandsofavorion.MaterialGroup;
 
 public class IOACreativeTabs {
     public static final CreativeModeTab MAIN = register("main",CreativeModeTab.builder(null,-1)
             .title(Component.translatable("Main"))
-            .icon(IOAItems.PRIMAL_ARROW::getDefaultInstance)
+            .icon(MaterialGroup.PRIMAL.arrow()::getDefaultInstance)
             .displayItems((parameters, output) -> {
                 for (Item item : IOAItems.ALL_ITEMS) {
                     output.accept(item);

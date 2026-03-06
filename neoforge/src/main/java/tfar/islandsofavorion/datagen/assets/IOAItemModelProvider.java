@@ -8,6 +8,7 @@ import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import tfar.islandsofavorion.IslandsOfAvorion;
 import tfar.islandsofavorion.MaterialGroup;
+import tfar.islandsofavorion.SecondMaterialGroup;
 import tfar.islandsofavorion.world.IOAItems;
 
 public class IOAItemModelProvider extends ItemModelProvider {
@@ -18,8 +19,22 @@ public class IOAItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         for (MaterialGroup materialGroup : MaterialGroup.MATERIAL_GROUPS) {
-            generatedItem(materialGroup.arrow().get());
+            generatedItem(materialGroup.arrow());
+            generatedItem(materialGroup.longsword());
+            generatedItem(materialGroup.rawOre());
         }
+
+        for (SecondMaterialGroup materialGroup : SecondMaterialGroup.SECOND_MATERIAL_GROUPS) {
+            generatedItem(materialGroup.shortbow().get());
+            generatedItem(materialGroup.staff().get());
+        }
+
+        generatedItem(IOAItems.HEADLESS_ARROW);
+
+        generatedItem(IOAItems.ANCIENT_SLAG);
+        generatedItem(IOAItems.COIN);
+        generatedItem(IOAItems.POOR_SLAG);
+        generatedItem(IOAItems.RICH_SLAG);
     }
     protected void simpleBlockItem(Item item, ResourceLocation loc) {
         String s = BuiltInRegistries.ITEM.getKey(item).toString();
