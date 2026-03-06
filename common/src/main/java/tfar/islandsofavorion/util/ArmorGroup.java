@@ -31,6 +31,8 @@ public record ArmorGroup(String name, Holder<ArmorMaterial> armorMaterial, Suppl
         boots.get();
     }
 
+    
+
     static Supplier<ArmorItem> createArmor(String name,Holder<ArmorMaterial> armorMaterial,ArmorItem.Type type) {
         return Suppliers.memoize(()-> IOAItems.register(name+"_plate_"+type.getSerializedName(),new ArmorItem(armorMaterial,type,new Item.Properties()
                 .durability(type.getDurability(33)))));

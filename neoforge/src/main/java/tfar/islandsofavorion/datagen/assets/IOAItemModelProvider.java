@@ -32,6 +32,9 @@ public class IOAItemModelProvider extends ItemModelProvider {
             generatedItem(materialGroup.armorGroup().chest().get());
             generatedItem(materialGroup.armorGroup().leggings().get());
             generatedItem(materialGroup.armorGroup().boots().get());
+            generatedItem(materialGroup.smithingHammer());
+            generatedItem(materialGroup.spear());
+            generatedItem(materialGroup.warAxe());
         }
 
         for (SecondMaterialGroup materialGroup : SecondMaterialGroup.SECOND_MATERIAL_GROUPS) {

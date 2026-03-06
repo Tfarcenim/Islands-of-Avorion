@@ -41,7 +41,10 @@ public final class MaterialGroup {
         longsword();
         rawOre();
         pickaxe();
+        smithingHammer();
         armorGroup.init();
+        spear();
+        warAxe();
     }
 
     public ArmorGroup armorGroup() {
@@ -125,6 +128,30 @@ public final class MaterialGroup {
             pickaxe = IOAItems.register(name+"_pickaxe",new Item(new Item.Properties()));
         }
         return pickaxe;
+    }
+
+    private Item smithingHammer;
+    public Item smithingHammer() {
+        if (smithingHammer == null) {
+            smithingHammer = IOAItems.register(name+"_smithing_hammer",new Item(new Item.Properties()));
+        }
+        return smithingHammer;
+    }
+
+    private Item spear;
+    public Item spear() {
+        if (spear == null) {
+            spear = IOAItems.register(name+"_spear",new Item(new Item.Properties()));
+        }
+        return pickaxe;
+    }
+
+    private Item warAxe;
+    public Item warAxe() {
+        if (warAxe == null) {
+            warAxe = IOAItems.register(name+"_war_axe",new Item(new Item.Properties()));
+        }
+        return warAxe;
     }
 
 
