@@ -9,6 +9,7 @@ import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import tfar.islandsofavorion.IslandsOfAvorion;
 import tfar.islandsofavorion.MaterialGroup;
 import tfar.islandsofavorion.SecondMaterialGroup;
+import tfar.islandsofavorion.util.ArmorGroup;
 import tfar.islandsofavorion.world.IOAItems;
 
 public class IOAItemModelProvider extends ItemModelProvider {
@@ -28,10 +29,7 @@ public class IOAItemModelProvider extends ItemModelProvider {
             generatedItem(materialGroup.needle());
             generatedItem(materialGroup.rawOre());
             generatedItem(materialGroup.pickaxe());
-            generatedItem(materialGroup.armorGroup().helmet().get());
-            generatedItem(materialGroup.armorGroup().chest().get());
-            generatedItem(materialGroup.armorGroup().leggings().get());
-            generatedItem(materialGroup.armorGroup().boots().get());
+            armorGroup(materialGroup.armorGroup());
             generatedItem(materialGroup.smithingHammer());
             generatedItem(materialGroup.spear());
             generatedItem(materialGroup.warAxe());
@@ -42,13 +40,42 @@ public class IOAItemModelProvider extends ItemModelProvider {
             generatedItem(materialGroup.staff().get());
         }
 
+        armorGroup(ArmorGroup.ARCHLEATHER);
+
         generatedItem(IOAItems.HEADLESS_ARROW);
+
+
+        generatedItem(IOAItems.BLIGHTLEAF);
+        generatedItem(IOAItems.BRYLL);
+        generatedItem(IOAItems.DUSKWEED);
+        generatedItem(IOAItems.ECTOGRASS);
+        generatedItem(IOAItems.ROSEBLOOD);
+        generatedItem(IOAItems.RUNELEAF);
+        generatedItem(IOAItems.SALVE_NETTLES);
+        generatedItem(IOAItems.SOULBELL);
+        generatedItem(IOAItems.SPIRITBLOOM);
+        generatedItem(IOAItems.WILDERCRESS);
+
+
+        generatedItem(IOAItems.AIR_STONE);
+        generatedItem(IOAItems.EARTH_STONE);
+        generatedItem(IOAItems.FIRE_STONE);
+        generatedItem(IOAItems.WATER_STONE);
+
 
         generatedItem(IOAItems.ANCIENT_SLAG);
         generatedItem(IOAItems.COIN);
         generatedItem(IOAItems.POOR_SLAG);
         generatedItem(IOAItems.RICH_SLAG);
     }
+
+    protected void armorGroup(ArmorGroup group) {
+        generatedItem(group.helmet().get());
+        generatedItem(group.chest().get());
+        generatedItem(group.leggings().get());
+        generatedItem(group.boots().get());
+    }
+
     protected void simpleBlockItem(Item item, ResourceLocation loc) {
         String s = BuiltInRegistries.ITEM.getKey(item).toString();
         getBuilder(s)

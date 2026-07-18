@@ -4,6 +4,7 @@ import net.minecraft.world.item.*;
 import tfar.islandsofavorion.IslandsOfAvorion;
 import tfar.islandsofavorion.MaterialGroup;
 import tfar.islandsofavorion.SecondMaterialGroup;
+import tfar.islandsofavorion.util.ArmorGroup;
 import tfar.islandsofavorion.world.item.MaterialArrowItem;
 
 import java.util.ArrayList;
@@ -26,6 +27,7 @@ public class IOAItems {
             materialGroup.shortbow().get();//triggers registration
             materialGroup.staff().get();
         }
+        ArmorGroup.ARCHLEATHER.init();
     }
 
     //fiber plants
@@ -46,7 +48,11 @@ public class IOAItems {
     public static final Item COIN = register("coin",new Item(new Item.Properties()));
     public static final Item POOR_SLAG = register("poor_slag",new Item(new Item.Properties()));
     public static final Item RICH_SLAG = register("rich_slag",new Item(new Item.Properties()));
-    //weapons
+
+    public static final Item AIR_STONE = register("air_stone",new Item(new Item.Properties()));
+    public static final Item EARTH_STONE = register("earth_stone",new Item(new Item.Properties()));
+    public static final Item FIRE_STONE = register("water_stone",new Item(new Item.Properties()));
+    public static final Item WATER_STONE = register("fire_stone",new Item(new Item.Properties()));
 
 
     public static void init() {

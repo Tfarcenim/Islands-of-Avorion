@@ -14,12 +14,12 @@ public final class MaterialGroup {
     private final String name;
     private final ArmorGroup armorGroup;
 
-    public MaterialGroup(String name, Tier tier, Holder<ArmorMaterial> armorMaterial) {
+    public MaterialGroup(String name, Tier tier, Holder<ArmorMaterial> armorMaterial,boolean plate) {
         this.name = name;
         MATERIAL_GROUPS.add(this);
         this.tier = tier;
         this.armorMaterial = armorMaterial;
-        armorGroup = new ArmorGroup(name,armorMaterial);
+        armorGroup = new ArmorGroup(name,armorMaterial,plate);
     }
 
     public Tier tier() {
@@ -157,17 +157,17 @@ public final class MaterialGroup {
 
     public static final List<MaterialGroup> MATERIAL_GROUPS = new ArrayList<>();
 
-    public static final MaterialGroup ARGONITE = new MaterialGroup("argonite", Tiers.NETHERITE, ArmorMaterials.NETHERITE);
-    public static final MaterialGroup BATHUS = new MaterialGroup("bathus", Tiers.NETHERITE, ArmorMaterials.NETHERITE);
-    public static final MaterialGroup FRACTITE = new MaterialGroup("fractite", Tiers.NETHERITE, ArmorMaterials.NETHERITE);
-    public static final MaterialGroup GORGONITE = new MaterialGroup("gorgonite", Tiers.NETHERITE, ArmorMaterials.NETHERITE);
-    public static final MaterialGroup KATAGON = new MaterialGroup("katagon", Tiers.NETHERITE, ArmorMaterials.NETHERITE);
-    public static final MaterialGroup KRATONITE = new MaterialGroup("kratonite", Tiers.NETHERITE, ArmorMaterials.NETHERITE);
-    public static final MaterialGroup MARMAROS = new MaterialGroup("marmaros", Tiers.NETHERITE, ArmorMaterials.NETHERITE);
-    public static final MaterialGroup NOVITE = new MaterialGroup("novite", Tiers.NETHERITE, ArmorMaterials.NETHERITE);
-    public static final MaterialGroup PRIMAL = new MaterialGroup("primal", Tiers.NETHERITE, ArmorMaterials.NETHERITE);
-    public static final MaterialGroup PROMETHIUM = new MaterialGroup("promethium", Tiers.NETHERITE, ArmorMaterials.NETHERITE);
-    public static final MaterialGroup ZEPHYRIUM = new MaterialGroup("zephyrium", Tiers.NETHERITE, ArmorMaterials.NETHERITE);
+    public static final MaterialGroup ARGONITE = new MaterialGroup("argonite", Tiers.NETHERITE, ArmorMaterials.NETHERITE,true);
+    public static final MaterialGroup BATHUS = new MaterialGroup("bathus", Tiers.NETHERITE, ArmorMaterials.NETHERITE,true);
+    public static final MaterialGroup FRACTITE = new MaterialGroup("fractite", Tiers.NETHERITE, ArmorMaterials.NETHERITE,true);
+    public static final MaterialGroup GORGONITE = new MaterialGroup("gorgonite", Tiers.NETHERITE, ArmorMaterials.NETHERITE,true);
+    public static final MaterialGroup KATAGON = new MaterialGroup("katagon", Tiers.NETHERITE, ArmorMaterials.NETHERITE,true);
+    public static final MaterialGroup KRATONITE = new MaterialGroup("kratonite", Tiers.NETHERITE, ArmorMaterials.NETHERITE,true);
+    public static final MaterialGroup MARMAROS = new MaterialGroup("marmaros", Tiers.NETHERITE, ArmorMaterials.NETHERITE,true);
+    public static final MaterialGroup NOVITE = new MaterialGroup("novite", Tiers.NETHERITE, ArmorMaterials.NETHERITE,true);
+    public static final MaterialGroup PRIMAL = new MaterialGroup("primal", Tiers.NETHERITE, ArmorMaterials.NETHERITE,true);
+    public static final MaterialGroup PROMETHIUM = new MaterialGroup("promethium", Tiers.NETHERITE, ArmorMaterials.NETHERITE,true);
+    public static final MaterialGroup ZEPHYRIUM = new MaterialGroup("zephyrium", Tiers.NETHERITE, ArmorMaterials.NETHERITE,true);
     private final Tier tier;
     private final Holder<ArmorMaterial> armorMaterial;
 
